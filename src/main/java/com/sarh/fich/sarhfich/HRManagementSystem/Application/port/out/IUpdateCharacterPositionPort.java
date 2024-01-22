@@ -4,5 +4,5 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Domain.CharacterPosition;
 
 public interface IUpdateCharacterPositionPort {
     
-    void updateCharecterPosition(CharacterPosition characterPosition);
+    void update(CharacterPosition characterPosition);
 }

@@ -26,7 +26,7 @@ public class UpdateCharacterPositionUseCase implements IUpdateCharacterPositionU
           characterPosition.setCharacterPosition(command.getCharacterPosition());
           characterPosition.setName(command.getName());
                            
-           updateCharacterPosition.updateCharecterPosition(characterPosition);                           
+           updateCharacterPosition.update(characterPosition);                           
 
           return true;
 

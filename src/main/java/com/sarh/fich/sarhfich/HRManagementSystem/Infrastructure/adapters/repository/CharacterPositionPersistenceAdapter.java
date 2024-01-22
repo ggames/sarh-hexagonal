@@ -12,11 +12,11 @@ ISaveCharacterPositionPort, IUpdateCharacterPositionPort {
 
     private final CharacterPositionRepository characterRepository;
 
-    private final CharacterPositionMapper mapper;
+    private final CharacterPositionMapper characterPositionMapper;
 
     public CharacterPositionPersistenceAdapter(CharacterPositionRepository cPositionRepository, CharacterPositionMapper mapper){
         this.characterRepository = cPositionRepository;
-        this.mapper = mapper;
+        this.characterPositionMapper = mapper;
     }
 
     @Override
@@ -24,19 +24,24 @@ ISaveCharacterPositionPort, IUpdateCharacterPositionPort {
         
         CharacterPositionEntity characterPosition = characterRepository.findById(id).orElseThrow(RuntimeException::new);
 
-        return mapper.toDto(characterPosition);
+        return  characterPositionMapper.toDto(characterPosition);
     }
 
     @Override
     public void save(CharacterPosition characterPosition) {
-        // TODO Auto-generated method stub
+         
+        CharacterPositionEntity characterP = characterPositionMapper.toEntity(characterPosition);
+
+        characterRepository.save(characterP);
         
     }
 
     @Override
     public void updateCharecterPosition(CharacterPosition characterPosition) {
-        // TODO Auto-generated method stub
+       
+        CharacterPositionEntity characterP = characterPositionMapper.toEntity(characterPosition);
         
+        characterRepository.save(characterP);
     }
     
 }
