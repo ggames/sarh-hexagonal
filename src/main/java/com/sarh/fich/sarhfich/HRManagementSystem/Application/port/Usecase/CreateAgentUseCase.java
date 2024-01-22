@@ -25,8 +25,6 @@ public class CreateAgentUseCase implements ICreateAgentUseCase {
     @Override
     public boolean createAgent(AgentCommand command) {
 
-        
-
         Agent agent = builder()
                       .name(command.getName())
                       .lastname(command.getLastname())
