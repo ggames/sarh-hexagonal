@@ -51,12 +51,13 @@ public class PositionEntity {
     private CharacterPositionEntity characterPosition;
 
     @ManyToOne
-    @JoinColumn(name= "transformacion_supresion_id")
-    private TransformationEntity suppressionTransformation;
-   
-    @ManyToOne
     @JoinColumn(name = "transformacion_creacion_id")
     private TransformationEntity creationTransformation;
+
+
+    @ManyToOne
+    @JoinColumn(name= "transformacion_supresion_id")
+    private TransformationEntity suppressionTransformation;
 
     private Date createdAt;
    

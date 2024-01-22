@@ -9,9 +9,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TransformationCommand {
-    
-    private String resolutionNumber;
+public class TypeDocumentCommand {
 
-    private String transformationResult;
+    private String type;
+    
 }

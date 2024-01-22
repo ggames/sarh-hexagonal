@@ -9,8 +9,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ItemPoint {
+public class ParentPoint {
     
     private Long id;
-    
+
+    private Point point;
+
+    private Integer occupiedQuantity;
 }

@@ -1,21 +1,20 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Application.port.in.command;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.OrganizationalUnit;
+import com.sarh.fich.sarhfich.HRManagementSystem.common.enums.CharacterPositionEnum;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
 @Builder
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrganizationalSubunitCommand {
- 
-    private String guaraniCode;
+public class CharacterPositionCommand {
+    
 
-    private String nameSubunit;
+    private CharacterPositionEnum characterPosition;
 
-    private OrganizationalUnit organizationalUnit;
+    private String name;
 }

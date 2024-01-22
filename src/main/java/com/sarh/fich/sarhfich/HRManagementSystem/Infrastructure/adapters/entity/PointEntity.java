@@ -44,8 +44,14 @@ public class PointEntity {
     @Column(name = "cantidad_faltantes", nullable = true)
     private Integer missingQuantity ;
     
+    /* @ManyToOne
+    @JoinColumn(name = "point_id", referencedColumnName = "id")
+    private PointEntity childPoint;
+
+    @OneToMany(mappedBy = "childPoint")
+    private List<PointEntity> pointParents; */
     @OneToMany(mappedBy = "poimt", cascade = CascadeType.ALL)
-    private List<ItemPointEntity> itemsPoint;
+    private List<ParentPointEntity> itemsPoint;
 
     @Column(name = "transitorio")
     private boolean isTransient;

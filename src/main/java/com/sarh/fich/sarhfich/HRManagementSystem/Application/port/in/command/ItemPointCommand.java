@@ -1,5 +1,7 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Application.port.in.command;
 
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Point;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,9 +11,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TransformationCommand {
+public class ItemPointCommand {
     
-    private String resolutionNumber;
+    private Point point;
 
-    private String transformationResult;
+    private Integer quantityAvailable;
 }

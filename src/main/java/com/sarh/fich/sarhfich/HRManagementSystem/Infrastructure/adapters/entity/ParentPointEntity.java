@@ -23,7 +23,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "ITEMS_PUNTOS")
-public class ItemPointEntity {
+public class ParentPointEntity {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,7 +34,7 @@ public class ItemPointEntity {
     private PointEntity point;
 
     @Column(name = "cantidad_ocupada")
-    private Integer quantityAvailable;
+    private Integer  occupiedQuantity;
 
     private Date createdAt;
    

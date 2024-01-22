@@ -18,4 +18,12 @@ public class Position {
     private OrganizationalUnit organizationalUnit;
 
     private Point point;
+
+    private PostStatus postStatus;
+
+    private CharacterPosition characterPosition;
+
+    private Transformation creationTransformation;
+
+    private Transformation suppressionTransformation;
 }
