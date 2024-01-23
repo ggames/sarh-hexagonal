@@ -37,7 +37,7 @@ ISaveCharacterPositionPort, IUpdateCharacterPositionPort {
     }
 
     @Override
-    public void updateCharecterPosition(CharacterPosition characterPosition) {
+    public void update(CharacterPosition characterPosition) {
        
         CharacterPositionEntity characterP = characterPositionMapper.toEntity(characterPosition);
         
