@@ -5,7 +5,9 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.in.command.Org
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.ILoadOrganizationalSubunitPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.IUpdateOrganizationalSubunitPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Domain.OrganizationalSubunit;
+import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 
+@UseCase
 public class UpdateOrganzationalSubunitUseCase implements IUpdateOrganizationalSubunitUseCase {
 
     private final ILoadOrganizationalSubunitPort loadOrganizationalSubunit;

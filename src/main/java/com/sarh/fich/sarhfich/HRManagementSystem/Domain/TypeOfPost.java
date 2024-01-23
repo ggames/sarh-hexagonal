@@ -1,5 +1,7 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Domain;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,4 +20,6 @@ public class TypeOfPost {
     private Double minimumWage;
 
     private Integer amountOfPostPoint;
+
+    List<Point> points;
 }

@@ -4,7 +4,9 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.in.ICreateOrga
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.in.command.OrganizationalSubunitCommand;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.ISaveOrganizationalSubunitPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Domain.OrganizationalSubunit;
+import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 
+@UseCase
 public class CreateOrganizationalSubunitUseCase implements ICreateOrganizationalSubunitUseCase{
 
     private final ISaveOrganizationalSubunitPort saveOrganizationalSubunit;

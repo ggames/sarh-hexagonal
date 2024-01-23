@@ -2,6 +2,8 @@ package com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity
 
 import java.util.Date;
 
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Point;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -28,6 +30,9 @@ public class ParentPointEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "punto_padre_id")
+    private Point parentPoint;
    
     @ManyToOne(optional = true)
     @JoinColumn(name = "punto_id")
