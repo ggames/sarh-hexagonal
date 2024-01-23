@@ -22,8 +22,8 @@ public class CreateOrganizationalUnitUseCase implements ICreateOrganizationalUni
         
         OrganizationalUnit organizationalUnit = OrganizationalUnit.builder()
                                               .nameUnit(command.getNameUnit())
-                                              .director(command.getDirector())
-                                              .vicePrincipal(command.getVicePrincipal()).build();
+                                              .directorId(command.getDirector())
+                                              .vicePrincipalId(command.getVicePrincipal()).build();
          
         saveOrganizationalUnit.save(organizationalUnit);                                      
 

@@ -11,9 +11,8 @@ import com.sarh.fich.sarhfich.HRManagementSystem.common.GenericMapper;
 @Mapper(componentModel = "spring")
 public interface CharacterPositionMapper extends GenericMapper<CharacterPosition, CharacterPositionEntity> {
     
-    CharacterPositionEntity toEntity(CharacterPosition source);
-    
     CharacterPosition toDto(CharacterPositionEntity entity);
     
-   
+        
+    
 }

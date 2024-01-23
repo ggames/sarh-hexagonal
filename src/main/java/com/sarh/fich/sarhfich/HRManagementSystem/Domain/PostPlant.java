@@ -2,12 +2,16 @@ package com.sarh.fich.sarhfich.HRManagementSystem.Domain;
 
 import java.util.Date;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Builder
+
 @Data
-
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class PostPlant {
     
     private Long id;

@@ -24,8 +24,8 @@ public class UpdateOrganizationalUnitUseCase implements IUpdateOrganizationalUni
         OrganizationalUnit organizationalUnit = loadOrganizationalUnitPort.load(id);
 
         organizationalUnit.setNameUnit(command.getNameUnit());
-        organizationalUnit.setDirector(command.getDirector());
-        organizationalUnit.setVicePrincipal(command.getVicePrincipal());
+        organizationalUnit.setDirectorId(command.getDirector());
+        organizationalUnit.setVicePrincipalId(command.getVicePrincipal());
 
         updateOrganizationalUnitPort.update(organizationalUnit); 
 

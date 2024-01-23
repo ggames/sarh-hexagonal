@@ -16,8 +16,8 @@ public class OrganizationalUnit {
 
     private String nameUnit;
 
-    private int director;
+    private int directorId;
 
-    private int vicePrincipal;
+    private int vicePrincipalId;
     
 }
