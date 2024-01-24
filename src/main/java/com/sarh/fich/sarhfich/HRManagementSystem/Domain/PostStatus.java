@@ -1,5 +1,7 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Domain;
 
+import java.util.List;
+
 import com.sarh.fich.sarhfich.HRManagementSystem.common.enums.PostStatusEnum;
 
 import lombok.AllArgsConstructor;
@@ -7,8 +9,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class PostStatus {
@@ -19,4 +21,5 @@ public class PostStatus {
 
     private String name;
     
+    List<Position> positions;
 }

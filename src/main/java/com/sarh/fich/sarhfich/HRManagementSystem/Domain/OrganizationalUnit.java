@@ -1,5 +1,7 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Domain;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -7,9 +9,10 @@ import lombok.NoArgsConstructor;
 
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+
 public class OrganizationalUnit {
     
     private Long id;
@@ -19,5 +22,9 @@ public class OrganizationalUnit {
     private int directorId;
 
     private int vicePrincipalId;
+
+    private List<OrganizationalSubunit> subUnits;
+
+    private List<Position> positions;
     
 }

@@ -10,5 +10,7 @@ import com.sarh.fich.sarhfich.HRManagementSystem.common.GenericMapper;
 public interface OrganizationalSubunitMapper extends 
          GenericMapper<OrganizationalSubunit, OrganizationalSubunitEntity> {
     
-        OrganizationalSubunit toDto(OrganizationalSubunitEntity entity);     
+        OrganizationalSubunit toDto(OrganizationalSubunitEntity entity); 
+        
+        //OrganizationalSubunitEntity toEntity(OrganizationalSubunit dto);
 }

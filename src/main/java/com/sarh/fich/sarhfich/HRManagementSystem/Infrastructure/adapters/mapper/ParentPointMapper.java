@@ -10,4 +10,6 @@ import com.sarh.fich.sarhfich.HRManagementSystem.common.GenericMapper;
 public interface ParentPointMapper extends GenericMapper<ParentPoint, ParentPointEntity> {
     
     ParentPoint toDto(ParentPointEntity entity);
+
+    //ParentPointEntity toEntity(ParentPoint dto);
 }

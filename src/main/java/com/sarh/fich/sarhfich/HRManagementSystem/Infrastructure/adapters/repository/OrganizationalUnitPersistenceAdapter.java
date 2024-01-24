@@ -6,7 +6,9 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.IUpdateOrg
 import com.sarh.fich.sarhfich.HRManagementSystem.Domain.OrganizationalUnit;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.OrganizationalUnitEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper.OrganizationalUnitMapper;
+import com.sarh.fich.sarhfich.HRManagementSystem.common.PersistenceAdapter;
 
+@PersistenceAdapter
 public class OrganizationalUnitPersistenceAdapter implements ILoadOrganizationalUnitPort,
 ISaveOrganizationalUnitPort, IUpdateOrganizationalUnitPort{
 

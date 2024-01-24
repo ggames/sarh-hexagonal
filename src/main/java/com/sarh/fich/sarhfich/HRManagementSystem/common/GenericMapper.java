@@ -2,6 +2,7 @@ package com.sarh.fich.sarhfich.HRManagementSystem.common;
 
 import java.util.List;
 
+import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapping;
 import org.springframework.data.domain.Page;
 
@@ -19,11 +20,12 @@ public interface GenericMapper<D, E> {
     
     @Mapping(ignore = true, target = "createdAt")
     @Mapping(ignore = true, target = "updatedAt")
+    D toDto(E entity);
+
+    @InheritInverseConfiguration
     E toEntity(D dto);
 
-    @Mapping(ignore = true, target = "createdAt")
-    @Mapping(ignore = true, target = "updatedAt")
-    D toDto(E entity);
+    
 
     List<E> toEntity(List<D> dtoList);
 

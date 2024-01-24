@@ -1,0 +1,37 @@
+package com.sarh.fich.sarhfich.HRManagementSystem.Application.port.Usecase;
+
+
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.in.ICreatePositionUseCase;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.in.command.PositionCommand;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.ISavePositionPort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Position;
+
+public class CreatePositionUseCase implements ICreatePositionUseCase {
+
+    private ISavePositionPort savePosition;
+
+    public CreatePositionUseCase(ISavePositionPort savePosition){
+        this.savePosition = savePosition;
+    }
+
+    @Override
+    public boolean savePosition(PositionCommand command) {
+    
+        Position position = Position.builder()
+                  .postCode(command.getPostCode())
+                  .characterPosition(command.getCharacterPosition())
+                  .organizationalUnit(command.getOrganizationalUnit())
+                  .point(command.getPoint())
+                  .postStatus(command.getPostStatus())
+                  .point(command.getPoint())
+                  .creationTransformation(command.getCreationTransformation())
+                  .suppressionTransformation(command.getSuppressionTransformation())
+                  .build();
+
+        savePosition.save(position); 
+
+        return true;
+    }
+
+ 
+}

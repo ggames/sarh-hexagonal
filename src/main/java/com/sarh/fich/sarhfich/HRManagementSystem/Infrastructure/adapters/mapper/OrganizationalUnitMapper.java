@@ -11,5 +11,5 @@ public interface OrganizationalUnitMapper extends GenericMapper<OrganizationalUn
     
     OrganizationalUnit toDto(OrganizationalUnitEntity source);
 
-    OrganizationalUnitEntity toEntity(OrganizationalUnit target);
+    //OrganizationalUnitEntity toEntity(OrganizationalUnit target);
 }
