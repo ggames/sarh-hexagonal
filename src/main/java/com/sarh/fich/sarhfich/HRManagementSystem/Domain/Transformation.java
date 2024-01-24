@@ -23,7 +23,7 @@ public class Transformation {
     @NotBlank(message = "Resultado de Transformación Invalido: El Resultado de transformación esta vacio")
     private String transformationResult;
 
-    private List<Position> createPositions;
+    private List<Position> createPosition;
 
-    private List<Position> suppressionPositions;
+    private List<Position> suppressionPosition;
 }

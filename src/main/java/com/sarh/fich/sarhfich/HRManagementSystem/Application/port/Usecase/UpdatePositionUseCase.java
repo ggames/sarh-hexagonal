@@ -5,7 +5,9 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.in.command.Pos
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.ILoadPositionPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.IUpdatePositionPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Position;
+import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 
+@UseCase
 public class UpdatePositionUseCase implements IUpdatePositionUseCase {
 
     private final ILoadPositionPort loadPosition;

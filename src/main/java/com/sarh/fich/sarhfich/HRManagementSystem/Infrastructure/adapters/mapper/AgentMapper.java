@@ -12,7 +12,7 @@ import org.mapstruct.Mapper;
 
         Agent toDto(AgentEntity entity); 
         
-        AgentEntity toEntity(Agent agent);
+        //AgentEntity toEntity(Agent agent);
         
     }
     

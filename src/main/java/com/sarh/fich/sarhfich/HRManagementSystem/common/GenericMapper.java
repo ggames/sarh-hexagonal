@@ -23,9 +23,9 @@ public interface GenericMapper<D, E> {
     D toDto(E entity);
 
     @InheritInverseConfiguration
+    @Mapping(ignore = true, target = "createdAt")
+    @Mapping(ignore = true, target = "updatedAt")
     E toEntity(D dto);
-
-    
 
     List<E> toEntity(List<D> dtoList);
 

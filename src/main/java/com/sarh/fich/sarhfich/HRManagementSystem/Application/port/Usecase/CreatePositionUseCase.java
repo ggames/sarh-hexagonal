@@ -5,7 +5,9 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.in.ICreatePosi
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.in.command.PositionCommand;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.ISavePositionPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Position;
+import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 
+@UseCase
 public class CreatePositionUseCase implements ICreatePositionUseCase {
 
     private ISavePositionPort savePosition;
