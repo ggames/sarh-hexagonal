@@ -1,5 +1,7 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Application.port.in.command;
 
+import java.util.List;
+
 import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Point;
 
 import lombok.AllArgsConstructor;
@@ -7,13 +9,19 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ItemPointCommand {
+public class TypeOfPostCommand {
     
-    private Point point;
+    private Long id;
 
-    private Integer quantityAvailable;
+    private String namePost;
+
+    private Double minimumWage;
+
+    private Integer amountOfPostPoint;
+
+    List<Point> points;
 }
