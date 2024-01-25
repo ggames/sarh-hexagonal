@@ -6,7 +6,9 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.IUpdatePoi
 import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Point;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.PointEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper.PointMapper;
+import com.sarh.fich.sarhfich.HRManagementSystem.common.PersistenceAdapter;
 
+@PersistenceAdapter
 public class PointPersistenceAdapter implements ILoadPointPort, ISavePointPort, IUpdatePointPort {
 
     private final PointRepository pointRepository;

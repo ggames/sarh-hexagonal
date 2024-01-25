@@ -6,7 +6,7 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Domain.OrganizationalUnit;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.OrganizationalUnitEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.GenericMapper;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = { PointMapper.class, OrganizationalSubunitMapper.class, CharacterPositionMapper.class})
 public interface OrganizationalUnitMapper extends GenericMapper<OrganizationalUnit, OrganizationalUnitEntity>{
     
     OrganizationalUnit toDto(OrganizationalUnitEntity source);

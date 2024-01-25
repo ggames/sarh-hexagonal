@@ -39,7 +39,7 @@ public class AgentController {
 
                 agent.getName(),
                 agent.getLastname(),
-                agent .getDocumentType(),
+                agent.getDocumentType(),
                 agent.getDocument(),
                 agent.getBirthDate(),
                 agent.getDocket(),

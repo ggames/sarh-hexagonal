@@ -21,7 +21,7 @@ public class PointCommand {
 
     private Integer missingQuantity;
 
-    private boolean isTransient;
+    private boolean isTemporary;
 
     private boolean rectorate;
 

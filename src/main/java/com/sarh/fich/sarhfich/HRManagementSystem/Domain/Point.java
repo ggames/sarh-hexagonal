@@ -1,5 +1,7 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Domain;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,7 +24,9 @@ public class Point {
 
     private Integer missingQuantity;
 
-    private boolean isTransient;
+    List<ParentPoint> itemsPoint;
+
+    private boolean isTemporary;
 
     private boolean rectorate;
 

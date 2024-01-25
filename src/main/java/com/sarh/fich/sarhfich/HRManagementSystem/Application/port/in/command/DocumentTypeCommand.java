@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TypeDocumentCommand {
+public class DocumentTypeCommand {
 
     private String type;
     

@@ -55,7 +55,7 @@ public class PointEntity {
     private List<ParentPointEntity> itemsPoint;
 
     @Column(name = "transitorio")
-    private boolean isTransient;
+    private boolean isTemporary;
    
     @Column(columnDefinition = "boolean default false", name = "de_rectorado")
     private boolean rectorate;

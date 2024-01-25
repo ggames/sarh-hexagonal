@@ -2,7 +2,7 @@ package com.sarh.fich.sarhfich.HRManagementSystem.Application.port.Usecase;
 
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.in.IUpdateCharacterPositionUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.in.command.CharacterPositionCommand;
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.ILoadCbaracterPositionPort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.ILoadCharacterPositionPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.IUpdateCharacterPositionPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Domain.CharacterPosition;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
@@ -10,11 +10,11 @@ import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 @UseCase
 public class UpdateCharacterPositionUseCase implements IUpdateCharacterPositionUseCase {
 
-    private final ILoadCbaracterPositionPort loadCbaracterPosition;
+    private final ILoadCharacterPositionPort loadCbaracterPosition;
 
     private final IUpdateCharacterPositionPort updateCharacterPosition;
 
-    public UpdateCharacterPositionUseCase(ILoadCbaracterPositionPort loadCbaracterPosition,
+    public UpdateCharacterPositionUseCase(ILoadCharacterPositionPort loadCbaracterPosition,
             IUpdateCharacterPositionPort updateCharacterPosition ){
                 this.loadCbaracterPosition = loadCbaracterPosition;
                 this.updateCharacterPosition = updateCharacterPosition;
