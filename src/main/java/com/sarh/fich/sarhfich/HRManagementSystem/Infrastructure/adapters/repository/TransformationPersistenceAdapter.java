@@ -12,9 +12,9 @@ import com.sarh.fich.sarhfich.HRManagementSystem.common.PersistenceAdapter;
 public class TransformationPersistenceAdapter implements ILoadTransformationPort, 
  ISaveTransformationPort, IUpdateTransformationPort{
 
-    private TransformationRepository transformationRepository;
+    private final TransformationRepository transformationRepository;
 
-    private TransformationMapper transformationMapper;
+    private final TransformationMapper transformationMapper;
 
     public TransformationPersistenceAdapter(TransformationRepository repository,
               TransformationMapper mapper ){
@@ -26,9 +26,9 @@ public class TransformationPersistenceAdapter implements ILoadTransformationPort
     @Override
     public Transformation load(Long id) {
         
-        TransformationEntity tranformation = transformationRepository.findById(id).orElseThrow(RuntimeException::new);
+        TransformationEntity transformation = transformationRepository.findById(id).orElseThrow(RuntimeException::new);
 
-        return transformationMapper.toDto(tranformation);
+        return transformationMapper.toDto(transformation);
     }
 
     @Override

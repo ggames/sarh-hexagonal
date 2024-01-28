@@ -1,6 +1,7 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.repository;
 
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadDocumentTypePort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IRetrieveDocumentTypePort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ISaveDocumentTypePort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdateDocumentTypePort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Domain.DocumentType;
@@ -8,9 +9,11 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper.DocumentTypeMapper;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.PersistenceAdapter;
 
+import java.util.List;
+
 @PersistenceAdapter
 public class DocumentTypePersistenceAdapter implements ILoadDocumentTypePort,
-ISaveDocumentTypePort, IUpdateDocumentTypePort {
+ISaveDocumentTypePort, IUpdateDocumentTypePort, IRetrieveDocumentTypePort {
 
     private final DocumentTypeRepository documentRepository;
 
@@ -46,5 +49,11 @@ ISaveDocumentTypePort, IUpdateDocumentTypePort {
 
         documentRepository.save(documentTypeEntity);
     }
-    
+
+    @Override
+    public List<DocumentType> getAll() {
+
+        List<DocumentTypeEntity> documentTypeList = documentRepository.findAll();
+        return documentMapper.toDto(documentTypeList);
+    }
 }

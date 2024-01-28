@@ -5,6 +5,7 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IRetrieveDocume
 import com.sarh.fich.sarhfich.HRManagementSystem.Domain.DocumentType;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.DocumentTypeEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -18,6 +19,7 @@ public class RetrieveDocumentTypeUseCase implements IRetrieveDocumentTypeUseCase
     }
 
 
+    @Transactional(readOnly = true)
     @Override
     public List<DocumentType> getAllDocumentType() {
 

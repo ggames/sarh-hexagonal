@@ -5,25 +5,21 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.ICreateAgentUseC
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IRetrieveAgentUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IUpdateAgentUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.AgentCommand;
-
 import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Agent;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.WebAdapter;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.exceptions.ApiUnprocessableEntity;
-
 import jakarta.validation.Valid;
-
-import java.util.List;
-import java.util.Optional;
-
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 
 @WebAdapter
 @RestController
-@RequestMapping("/sarh")
+@RequestMapping("/sarh/agent")
 public class AgentController {
 
     private final IUpdateAgentUseCase sendUpdateAgentPort;

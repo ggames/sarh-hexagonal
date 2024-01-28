@@ -4,6 +4,6 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.Transfor
 
 public interface ICreateTransformationUseCase {
 
-    public boolean createTransformation(TransformationCommand command);
+    public boolean saveTransformation(TransformationCommand command);
     
 }

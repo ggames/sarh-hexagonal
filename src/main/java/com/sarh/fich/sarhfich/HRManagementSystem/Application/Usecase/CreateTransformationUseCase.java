@@ -20,7 +20,7 @@ public class CreateTransformationUseCase implements ICreateTransformationUseCase
     }
 
     @Override
-    public boolean createTransformation(TransformationCommand command) {
+    public boolean saveTransformation(TransformationCommand command) {
         
         Transformation tranformation = Transformation.builder()
                               .resolutionNumber(command.getResolutionNumber())
