@@ -10,4 +10,6 @@ import com.sarh.fich.sarhfich.HRManagementSystem.common.GenericMapper;
 public interface PostPlantMapper extends GenericMapper<PostPlant, PostPlantEntity>{
     
     PostPlant toDto(PostPlantEntity entity);
+
+    PostPlantEntity toEntity(PostPlant dto);
 }

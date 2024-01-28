@@ -22,7 +22,7 @@ public interface GenericMapper<D, E> {
     @Mapping(ignore = true, target = "updatedAt")
     D toDto(E entity);
 
-    @InheritInverseConfiguration
+    //@InheritInverseConfiguration
     @Mapping(ignore = true, target = "createdAt")
     @Mapping(ignore = true, target = "updatedAt")
     E toEntity(D dto);

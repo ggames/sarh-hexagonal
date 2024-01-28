@@ -1,8 +1,8 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.repository;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.ILoadTransformationPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.ISaveTransformationPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.IUpdateTransformationPort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadTransformationPort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ISaveTransformationPort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdateTransformationPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Transformation;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.TransformationEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper.TransformationMapper;

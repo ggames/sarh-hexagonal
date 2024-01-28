@@ -12,5 +12,5 @@ public interface OrganizationalSubunitMapper extends
     
         OrganizationalSubunit toDto(OrganizationalSubunitEntity entity); 
         
-       // OrganizationalSubunitEntity toEntity(OrganizationalSubunit dto);
+       
 }

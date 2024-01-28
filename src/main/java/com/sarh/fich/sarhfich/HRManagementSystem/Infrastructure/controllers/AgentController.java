@@ -1,16 +1,22 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.controllers;
 
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.in.ICreateAgentUseCase;
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.in.IUpdateAgentUseCase;
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.in.command.AgentCommand;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.ICreateAgentUseCase;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IRetrieveAgentUseCase;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IUpdateAgentUseCase;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.AgentCommand;
+
 import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Agent;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.WebAdapter;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.exceptions.ApiUnprocessableEntity;
 
 import jakarta.validation.Valid;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -22,11 +28,13 @@ public class AgentController {
 
     private final IUpdateAgentUseCase sendUpdateAgentPort;
     private final ICreateAgentUseCase sendNewAgentPort;
+    private final IRetrieveAgentUseCase allAgentPort;
   
     public AgentController(IUpdateAgentUseCase sendUpdateAgentPort,
-            ICreateAgentUseCase sendNewAgentPort) {
+            ICreateAgentUseCase sendNewAgentPort, IRetrieveAgentUseCase allAgentPort) {
         this.sendUpdateAgentPort = sendUpdateAgentPort;
         this.sendNewAgentPort = sendNewAgentPort;
+        this.allAgentPort = allAgentPort;
        
     }
 
@@ -37,7 +45,7 @@ public class AgentController {
 
         AgentCommand command = new AgentCommand(
 
-                agent.getName(),
+                agent.getFirstname(),
                 agent.getLastname(),
                 agent.getDocumentType(),
                 agent.getDocument(),
@@ -56,7 +64,7 @@ public class AgentController {
 
         AgentCommand command = new AgentCommand(
 
-                agent.getName(),
+                agent.getFirstname(),
                 agent.getLastname(),
                 agent.getDocumentType(),
                 agent.getDocument(),
@@ -68,5 +76,16 @@ public class AgentController {
 
         sendNewAgentPort.createAgent(command);
     }
+
+    @GetMapping(path= "all", produces = MediaType.APPLICATION_JSON_VALUE)
+    ResponseEntity<List<Agent>> getAll(){
+          return ResponseEntity.ok(allAgentPort.getAllAgents());
+    }
+
+    @GetMapping(path = "agent/{document}", produces = MediaType.APPLICATION_JSON_VALUE)
+    ResponseEntity<Agent> getAgentByDocument(@PathVariable("document") String document){
+        return ResponseEntity.ok(allAgentPort.findByDocument(document));
+    }
+
 
 }

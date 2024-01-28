@@ -1,8 +1,8 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.repository;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.ILoadOrganizationalUnitPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.ISaveOrganizationalUnitPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.IUpdateOrganizationalUnitPort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadOrganizationalUnitPort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ISaveOrganizationalUnitPort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdateOrganizationalUnitPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Domain.OrganizationalUnit;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.OrganizationalUnitEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper.OrganizationalUnitMapper;

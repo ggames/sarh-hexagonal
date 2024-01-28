@@ -7,12 +7,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class OrganizationalUnit {
     
     private Long id;
@@ -26,5 +24,5 @@ public class OrganizationalUnit {
     private List<OrganizationalSubunit> subUnits;
 
     private List<Position> positions;
-    
+
 }

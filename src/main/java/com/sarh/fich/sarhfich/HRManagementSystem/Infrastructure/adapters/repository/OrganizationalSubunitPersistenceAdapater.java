@@ -1,12 +1,14 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.repository;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.ILoadOrganizationalSubunitPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.ISaveOrganizationalSubunitPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.IUpdateOrganizationalSubunitPort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadOrganizationalSubunitPort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ISaveOrganizationalSubunitPort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdateOrganizationalSubunitPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Domain.OrganizationalSubunit;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.OrganizationalSubunitEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper.OrganizationalSubunitMapper;
+import com.sarh.fich.sarhfich.HRManagementSystem.common.PersistenceAdapter;
 
+@PersistenceAdapter
 public class OrganizationalSubunitPersistenceAdapater implements ILoadOrganizationalSubunitPort,
 ISaveOrganizationalSubunitPort, IUpdateOrganizationalSubunitPort{
 

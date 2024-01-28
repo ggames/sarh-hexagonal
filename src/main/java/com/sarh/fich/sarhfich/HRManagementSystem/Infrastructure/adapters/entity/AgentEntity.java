@@ -14,13 +14,15 @@ import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Data
 @Table(name = "AGENTES")
 public class AgentEntity {
 
@@ -29,7 +31,7 @@ public class AgentEntity {
     private Long id;
 
     @Column(name = "nombre", length = 45, nullable = false)
-    private String name;
+    private String firstname;
 
     @Column(name = "apellido", length = 45, nullable = false)
     private String lastname;
@@ -37,7 +39,7 @@ public class AgentEntity {
     @ManyToOne
     @JoinColumn(name = "tipo_doc_id", nullable = false)
     private DocumentTypeEntity documentType;
-    
+
     @Column(nullable = false)
     private String document;
 
@@ -55,13 +57,10 @@ public class AgentEntity {
 
     @Column(length = 45)
     private String address;
-    
-    
+
     private Date createdAt;
-   
+
     private Date updatedAt;
-
-
     @PrePersist
     protected void prePersist(){
         this.createdAt = new Date();
@@ -71,4 +70,6 @@ public class AgentEntity {
     protected void preUpdate(){
         this.updatedAt = new Date();
     }
+
+    
 }

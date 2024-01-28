@@ -15,6 +15,6 @@ public interface PositionMapper extends GenericMapper<Position, PositionEntity> 
 
     Position toDto(PositionEntity entity);
 
-   // PositionEntity toEntity(Position dto);
+    PositionEntity toEntity(Position dto);
 
 }

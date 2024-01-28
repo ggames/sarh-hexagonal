@@ -2,10 +2,11 @@ package com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity
 
 import java.util.Date;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Point;
+
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -19,8 +20,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder
+
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -32,12 +34,14 @@ public class ParentPointEntity {
     private Long id;
 
     @Column(name = "punto_padre_id")
-    private Point parentPoint;
-   
-    @ManyToOne(optional = true)
+    private Long parentPoint;
+    
+    
+    @ManyToOne
     @JoinColumn(name = "punto_id")
-    private PointEntity point;
+    private PointEntity childPoint;
 
+   
     @Column(name = "cantidad_ocupada")
     private Integer  occupiedQuantity;
 

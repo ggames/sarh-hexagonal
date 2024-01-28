@@ -1,8 +1,8 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.repository;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.ILoadDocumentTypePort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.ISaveDocumentTypePort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.IUpdateDocumentTypePort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadDocumentTypePort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ISaveDocumentTypePort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdateDocumentTypePort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Domain.DocumentType;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.DocumentTypeEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper.DocumentTypeMapper;

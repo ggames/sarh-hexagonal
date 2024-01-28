@@ -1,12 +1,14 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.repository;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.ILoadPostStatusPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.ISavePostStatusPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.IUpdatePostStatusPort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadPostStatusPort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ISavePostStatusPort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdatePostStatusPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Domain.PostStatus;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.PostStatusEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper.PostStatusMapper;
+import com.sarh.fich.sarhfich.HRManagementSystem.common.PersistenceAdapter;
 
+@PersistenceAdapter
 public class PostStatusPersistenceAdapter implements ILoadPostStatusPort,
  ISavePostStatusPort, IUpdatePostStatusPort {
 

@@ -12,7 +12,7 @@ import com.sarh.fich.sarhfich.HRManagementSystem.common.GenericMapper;
 public interface CharacterPositionMapper extends GenericMapper<CharacterPosition, CharacterPositionEntity> {
     
     CharacterPosition toDto(CharacterPositionEntity entity);
-    
+
         
     
 }

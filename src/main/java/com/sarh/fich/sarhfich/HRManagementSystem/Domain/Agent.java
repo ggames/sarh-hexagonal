@@ -20,7 +20,7 @@ public class Agent {
     @NotBlank(message = "Nombre Invalido: Nombre en blanco")
     @NotNull(message = "Nombre Invalido: El nombre es NULL")
     @Size(min = 3, max = 30, message ="Nombre Invalido: Debe tener de 3 a 30 caracteres ")
-    private String name;
+    private String firstname;
    
     private String lastname;
    

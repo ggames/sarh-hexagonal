@@ -11,5 +11,4 @@ public interface ParentPointMapper extends GenericMapper<ParentPoint, ParentPoin
     
     ParentPoint toDto(ParentPointEntity entity);
 
-    //ParentPointEntity toEntity(ParentPoint dto);
 }

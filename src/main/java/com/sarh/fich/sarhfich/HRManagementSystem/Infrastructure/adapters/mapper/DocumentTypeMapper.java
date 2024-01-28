@@ -11,8 +11,6 @@ import com.sarh.fich.sarhfich.HRManagementSystem.common.GenericMapper;
 
 @Mapper(componentModel = "spring", uses = { AgentMapper.class})
 public interface DocumentTypeMapper extends GenericMapper<DocumentType, DocumentTypeEntity> {
-    
-   
-    //DocumentTypeEntity toEntity(DocumentType source);
     DocumentType toDto(DocumentTypeEntity target);
+    DocumentTypeEntity toEntity(DocumentType source);
 }

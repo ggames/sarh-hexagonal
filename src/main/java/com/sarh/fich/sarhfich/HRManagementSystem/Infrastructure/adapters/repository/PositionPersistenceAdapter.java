@@ -1,8 +1,8 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.repository;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.ILoadPositionPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.ISavePositionPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.IUpdatePositionPort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadPositionPort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ISavePositionPort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdatePositionPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Position;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.PositionEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper.PositionMapper;

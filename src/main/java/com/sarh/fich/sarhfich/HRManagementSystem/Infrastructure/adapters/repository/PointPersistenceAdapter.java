@@ -1,8 +1,8 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.repository;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.ILoadPointPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.ISavePointPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.port.out.IUpdatePointPort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadPointPort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ISavePointPort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdatePointPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Point;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.PointEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper.PointMapper;

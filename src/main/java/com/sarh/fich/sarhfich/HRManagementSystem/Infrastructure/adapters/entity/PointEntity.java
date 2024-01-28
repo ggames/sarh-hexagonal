@@ -3,7 +3,8 @@ package com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity
 import java.util.Date;
 import java.util.List;
 
-import jakarta.persistence.CascadeType;
+
+//import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -20,8 +21,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder
+
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -45,13 +47,15 @@ public class PointEntity {
     @Column(name = "cantidad_faltantes", nullable = true)
     private Integer missingQuantity ;
     
-    /* @ManyToOne
+    
+    /* @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "point_id", referencedColumnName = "id")
     private PointEntity childPoint;
 
     @OneToMany(mappedBy = "childPoint")
-    private List<PointEntity> pointParents; */
-    @OneToMany(mappedBy = "poimt", cascade = CascadeType.ALL)
+    private List<PointEntity> pointParents; */ 
+    
+    @OneToMany(mappedBy = "childPoint")
     private List<ParentPointEntity> itemsPoint;
 
     @Column(name = "transitorio")

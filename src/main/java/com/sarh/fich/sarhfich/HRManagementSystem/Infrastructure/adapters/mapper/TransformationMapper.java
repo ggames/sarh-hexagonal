@@ -7,13 +7,10 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Transformation;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.TransformationEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.GenericMapper;
 
-@Mapper(componentModel = "spring", uses = { PositionMapper.class })
+@Mapper(componentModel = "spring")
 public interface TransformationMapper extends GenericMapper<Transformation, TransformationEntity> {
 
     Transformation toDto(TransformationEntity entity); 
-   
-    TransformationEntity toEntity(Transformation dto);
-
-    
+      
     
 }

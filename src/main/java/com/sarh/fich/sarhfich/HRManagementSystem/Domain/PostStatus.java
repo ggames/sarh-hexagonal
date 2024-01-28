@@ -9,6 +9,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -19,7 +20,9 @@ public class PostStatus {
 
     private PostStatusEnum postStatus;
 
-    private String name;
+    private String namePostStatus;
     
     List<Position> positions;
+
+    
 }
