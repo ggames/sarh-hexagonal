@@ -38,7 +38,7 @@ public class CharacterPositionController {
         return ResponseEntity.ok(retrieveCharacterPosition.getAllCharactersPositions());
     }
 
-    @PostMapping(path = "create", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "create", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void save(@RequestBody  CharacterPosition characterPosition){
 
         CharacterPositionCommand command = CharacterPositionCommand.builder()
@@ -48,7 +48,7 @@ public class CharacterPositionController {
         saveCharacterPosition.saveCharacterPosition(command);
     }
 
-    @PutMapping(path = "update/{id}")
+    @PutMapping(path = "update/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void update(@PathVariable("id")  Long id, @RequestBody CharacterPosition character ){
         CharacterPositionCommand command = CharacterPositionCommand.builder()
                 .nameCharacter(character.getName())

@@ -1,6 +1,7 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.repository;
 
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadPointPort;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IRetrievePointPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ISavePointPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdatePointPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Point;
@@ -8,8 +9,11 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper.PointMapper;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.PersistenceAdapter;
 
+import java.util.List;
+
 @PersistenceAdapter
-public class PointPersistenceAdapter implements ILoadPointPort, ISavePointPort, IUpdatePointPort {
+public class PointPersistenceAdapter implements ILoadPointPort, ISavePointPort,
+        IUpdatePointPort, IRetrievePointPort {
 
     private final PointRepository pointRepository;
 
@@ -45,5 +49,18 @@ public class PointPersistenceAdapter implements ILoadPointPort, ISavePointPort, 
         return pointMapper.toDto(pointEntity);
 
     }
-    
+
+    @Override
+    public List<Point> fetchAll() {
+        List<PointEntity> pointList = pointRepository.findAll();
+        return pointMapper.toDto(pointList);
+    }
+
+    @Override
+    public Point fetchById(Long id) {
+
+        PointEntity point = pointRepository.findById(id).orElseThrow(RuntimeException::new);
+
+        return pointMapper.toDto(point);
+    }
 }

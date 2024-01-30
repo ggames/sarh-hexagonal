@@ -37,7 +37,7 @@ public class DocumentTypeController {
 
     }
 
-    @PostMapping(path = "create", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "create", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void save(@RequestBody DocumentType documentType){
 
         DocumentTypeCommand command = DocumentTypeCommand.builder()
@@ -47,7 +47,7 @@ public class DocumentTypeController {
         saveDocumentType.saveDocumentType(command);
     }
 
-    @PutMapping(path = "update/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(path = "update/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void update(Long id, DocumentType documentType){
         DocumentTypeCommand command = DocumentTypeCommand.builder()
                                .type(documentType.getType()).build();

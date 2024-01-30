@@ -29,7 +29,7 @@ public class TransformationController {
         this.updateTransformation = updateTransformation;
     }
 
-    @PostMapping(path = "create", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "create", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void save(@RequestBody Transformation transformation) {
         TransformationCommand command = TransformationCommand.builder()
                 .resolutionNumber(transformation.getResolutionNumber())
@@ -38,7 +38,7 @@ public class TransformationController {
         saveTransformation.saveTransformation(command);
     }
 
-    @PutMapping(path = "update/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(path = "update/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void update(@PathVariable Long id, @RequestBody Transformation transformation){
 
         TransformationCommand command = TransformationCommand.builder()
