@@ -4,7 +4,7 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.ICreateTransform
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IRetrieveTransformationUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IUpdateTransformationUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.TransformationCommand;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Transformation;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Transformation;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.WebAdapter;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

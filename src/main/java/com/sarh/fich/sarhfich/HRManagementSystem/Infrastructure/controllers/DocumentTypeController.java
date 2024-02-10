@@ -4,7 +4,7 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.ICreateDocumentT
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IRetrieveDocumentTypeUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IUpdateDocumentTypeUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.DocumentTypeCommand;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.DocumentType;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.DocumentType;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.WebAdapter;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

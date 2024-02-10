@@ -4,7 +4,7 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadTypeOfPost
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IRetrieveTypeOfPostPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ISaveTypeOfPostPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdateTypeOfPostPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.TypeOfPost;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.TypeOfPost;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.TypeOfPostEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper.TypeOfPostMapper;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.PersistenceAdapter;

@@ -4,7 +4,7 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadCharacterP
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IRetrieveCharacterPositionPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ISaveCharacterPositionPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdateCharacterPositionPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.CharacterPosition;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.CharacterPosition;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.CharacterPositionEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper.CharacterPositionMapper;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.PersistenceAdapter;

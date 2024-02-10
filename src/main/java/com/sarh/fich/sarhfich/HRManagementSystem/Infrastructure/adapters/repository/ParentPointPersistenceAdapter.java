@@ -1,8 +1,7 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.repository;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.ParentPointCommand;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.*;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.ParentPoint;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.ParentPoint;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.ParentPointEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper.ParentPointMapper;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.PersistenceAdapter;

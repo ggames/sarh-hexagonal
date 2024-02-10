@@ -1,6 +1,6 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Application.in;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.PostPlant;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.PostPlant;
 
 import java.util.List;
 

@@ -1,8 +1,7 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.controllers;
 
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IRetrievePostStatusUseCase;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.PostStatus;
-import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.PostStatusEntity;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.PostStatus;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.WebAdapter;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

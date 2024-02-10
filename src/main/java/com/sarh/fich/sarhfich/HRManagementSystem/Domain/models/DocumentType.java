@@ -1,22 +1,16 @@
-package com.sarh.fich.sarhfich.HRManagementSystem.Domain;
+package com.sarh.fich.sarhfich.HRManagementSystem.Domain.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ParentPoint {
+public class DocumentType {
     
     private Long id;
-
-    private Long parentPoint;
-
-    private Point childPoint;
-
-    private Integer occupiedQuantity;
+    private String type;
 }

@@ -4,7 +4,7 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IUpdatePostStatu
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.PostStatusCommand;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadPostStatusPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdatePostStatusPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.PostStatus;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.PostStatus;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 
 

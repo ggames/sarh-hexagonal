@@ -4,7 +4,7 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.ICreatePositionU
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IRetrievePositionUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IUpdatePositionUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.PositionCommand;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Position;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Position;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.WebAdapter;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

@@ -2,7 +2,7 @@ package com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper
 
 import org.mapstruct.Mapper;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.OrganizationalUnit;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.OrganizationalUnit;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.OrganizationalUnitEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.GenericMapper;
 

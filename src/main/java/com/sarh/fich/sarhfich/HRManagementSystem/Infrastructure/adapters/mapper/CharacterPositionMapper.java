@@ -4,7 +4,7 @@ package com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper
 
 import org.mapstruct.Mapper;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.CharacterPosition;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.CharacterPosition;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.CharacterPositionEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.GenericMapper;
 

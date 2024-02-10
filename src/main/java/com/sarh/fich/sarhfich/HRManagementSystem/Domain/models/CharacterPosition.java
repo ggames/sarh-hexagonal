@@ -1,4 +1,4 @@
-package com.sarh.fich.sarhfich.HRManagementSystem.Domain;
+package com.sarh.fich.sarhfich.HRManagementSystem.Domain.models;
 
 import com.sarh.fich.sarhfich.HRManagementSystem.common.enums.CharacterPositionEnum;
 

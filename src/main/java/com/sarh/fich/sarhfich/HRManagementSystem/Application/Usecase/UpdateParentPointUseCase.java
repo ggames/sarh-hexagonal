@@ -4,8 +4,10 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IUpdateParentPoi
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.ParentPointCommand;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadParentPointPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdateParentPointPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.ParentPoint;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.ParentPoint;
+import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 
+@UseCase
 public class UpdateParentPointUseCase implements IUpdateParentPointUseCase {
 
     private final IUpdateParentPointPort updateParentPoint;

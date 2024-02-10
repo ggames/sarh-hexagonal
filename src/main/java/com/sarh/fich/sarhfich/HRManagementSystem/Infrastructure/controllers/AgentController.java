@@ -5,10 +5,12 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.ICreateAgentUseC
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IRetrieveAgentUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IUpdateAgentUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.AgentCommand;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Agent;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Agent;
+import com.sarh.fich.sarhfich.HRManagementSystem.Exceptions.BusinessException;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.WebAdapter;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.exceptions.ApiUnprocessableEntity;
 import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -35,28 +37,17 @@ public class AgentController {
     }
 
     @PutMapping(path = "update/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
-    void update(@PathVariable() Long id, @RequestBody @Valid Agent agent) throws ApiUnprocessableEntity {
+    public ResponseEntity<?> update(@PathVariable() Long id,
+                                    @RequestBody @Valid AgentCommand command) throws BusinessException {
+           sendUpdateAgentPort.updateAgent(id, command);
 
-      
-
-        AgentCommand command = new AgentCommand(
-
-                agent.getFirstname(),
-                agent.getLastname(),
-                agent.getDocumentType(),
-                agent.getDocument(),
-                agent.getBirthDate(),
-                agent.getDocket(),
-                agent.getEmail(),
-                agent.getPhone(),
-                agent.getAddress());
-
-        sendUpdateAgentPort.updateAgent(id, command);
+        return new ResponseEntity<Agent>(HttpStatus.OK);
     }
    
     @PostMapping(path = "create", consumes = MediaType.APPLICATION_JSON_VALUE)
     void create(@RequestBody Agent agent) throws ApiUnprocessableEntity {
-      
+
+
 
         AgentCommand command = new AgentCommand(
 
@@ -70,7 +61,7 @@ public class AgentController {
                 agent.getPhone(),
                 agent.getAddress());
 
-        sendNewAgentPort.createAgent(command);
+         sendNewAgentPort.createAgent(command);
     }
 
     @GetMapping(path= "all", produces = MediaType.APPLICATION_JSON_VALUE)

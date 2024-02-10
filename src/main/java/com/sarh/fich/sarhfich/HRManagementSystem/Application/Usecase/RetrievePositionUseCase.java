@@ -2,11 +2,12 @@ package com.sarh.fich.sarhfich.HRManagementSystem.Application.Usecase;
 
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IRetrievePositionUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IRetrievePositionPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.OrganizationalSubunit;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Position;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Position;
+import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 
 import java.util.List;
 
+@UseCase
 public class RetrievePositionUseCase implements IRetrievePositionUseCase {
 
     private final IRetrievePositionPort retrievePosition;

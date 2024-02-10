@@ -1,10 +1,10 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.CharacterPosition;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.OrganizationalUnit;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Point;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.PostStatus;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Transformation;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.CharacterPosition;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.OrganizationalUnit;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Point;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.PostStatus;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Transformation;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

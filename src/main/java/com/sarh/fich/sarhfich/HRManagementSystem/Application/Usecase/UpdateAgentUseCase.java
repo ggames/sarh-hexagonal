@@ -6,7 +6,7 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IUpdateAgentUseC
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.AgentCommand;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadAgentPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdateAgentPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Agent;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Agent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,8 +38,11 @@ public class UpdateAgentUseCase implements IUpdateAgentUseCase {
       
              logger.info("AGENTE " + agent);
         
-                   agent.setFirstname(command.getFirstName());
-                   agent.setLastname(command.getFirstName());
+                   agent.setFirstname(command.getFirstname());
+                   agent.setLastname(command.getFirstname());
+
+
+
                    agent.setDocumentType(command.getDocumentType());
                    agent.setDocument(command.getDocument());
                    agent.setBirthDate(command.getBirthDate());

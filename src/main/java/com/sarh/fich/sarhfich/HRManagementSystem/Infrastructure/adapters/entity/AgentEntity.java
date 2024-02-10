@@ -46,6 +46,12 @@ public class AgentEntity {
     @Column(name = "fecha_nac")
     private Date birthDate;
 
+    @Column(name = "fecha_baja")
+    private Date leavingDate;
+
+    @Column(name = "es_fallecido")
+    private boolean isDeceased;
+
     @Column(name = "legajo")
     private String docket;
 

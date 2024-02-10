@@ -4,7 +4,7 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.ICreateTypeOfPos
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IRetrieveTypeOfPostUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IUpdateTypeOfPostUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.TypeOfPostCommand;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.TypeOfPost;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.TypeOfPost;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.WebAdapter;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

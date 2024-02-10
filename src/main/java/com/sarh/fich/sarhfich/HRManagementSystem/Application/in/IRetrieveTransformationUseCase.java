@@ -1,6 +1,6 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Application.in;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Transformation;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Transformation;
 
 import java.util.List;
 

@@ -55,7 +55,7 @@ public class PointEntity {
     @OneToMany(mappedBy = "childPoint")
     private List<PointEntity> pointParents; */ 
     
-    @OneToMany(mappedBy = "childPoint")
+    @OneToMany(mappedBy = "parentPoint")
     private List<ParentPointEntity> itemsPoint;
 
     @Column(name = "transitorio")

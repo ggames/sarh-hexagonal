@@ -1,6 +1,6 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.OrganizationalUnit;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.OrganizationalUnit;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

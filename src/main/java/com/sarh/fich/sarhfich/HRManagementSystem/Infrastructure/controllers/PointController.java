@@ -1,11 +1,10 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.controllers;
 
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.ICreatePointUseCase;
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.ICreatePositionUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IRetrievePointUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IUpdatePointUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.PointCommand;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Point;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Point;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.WebAdapter;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

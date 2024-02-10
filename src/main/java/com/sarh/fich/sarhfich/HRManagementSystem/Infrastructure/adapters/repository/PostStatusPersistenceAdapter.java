@@ -4,8 +4,11 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadPostStatus
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IRetrievePostStatusPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ISavePostStatusPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdatePostStatusPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.PostStatus;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Agent;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.PostStatus;
+import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.AgentEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.PostStatusEntity;
+import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper.AgentMapper;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper.PostStatusMapper;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.PersistenceAdapter;
 
@@ -16,13 +19,14 @@ public class PostStatusPersistenceAdapter implements ILoadPostStatusPort,
  ISavePostStatusPort, IUpdatePostStatusPort, IRetrievePostStatusPort {
 
     private final PostStatusRepository statusRepository;
-
     private final PostStatusMapper statusMapper;
 
-    public PostStatusPersistenceAdapter(PostStatusRepository statusRepository, 
-    PostStatusMapper statusMapper){
+    private final AgentMapper agentMapper;
+    public PostStatusPersistenceAdapter(PostStatusRepository statusRepository,
+                                        PostStatusMapper statusMapper, AgentMapper agentMapper){
         this.statusRepository = statusRepository;
         this.statusMapper = statusMapper;
+        this.agentMapper = agentMapper;
     }
 
     @Override
@@ -63,5 +67,12 @@ public class PostStatusPersistenceAdapter implements ILoadPostStatusPort,
         PostStatusEntity postStatus = statusRepository.findById(id).orElseThrow(RuntimeException::new);
 
         return statusMapper.toDto(postStatus);
+    }
+
+    @Override
+    public PostStatus fetchByPostStatus(String poststatus) {
+
+        PostStatusEntity postStatus = statusRepository.findByPostStatus(poststatus);
+        return  statusMapper.toDto(postStatus) ;
     }
 }

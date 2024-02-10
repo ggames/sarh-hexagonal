@@ -5,7 +5,7 @@ package com.sarh.fich.sarhfich.HRManagementSystem.Application.Usecase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.ICreateOrganizationalUnitUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.OrganizationalUnitCommand;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ISaveOrganizationalUnitPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.OrganizationalUnit;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.OrganizationalUnit;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 
 @UseCase

@@ -5,7 +5,7 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IUpdateOrganizat
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.OrganizationalUnitCommand;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdateOrganizationalUnitPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadOrganizationalUnitPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.OrganizationalUnit;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.OrganizationalUnit;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 
 @UseCase

@@ -2,7 +2,7 @@ package com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command;
 
 import java.util.List;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Point;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Point;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,4 +1,4 @@
-package com.sarh.fich.sarhfich.HRManagementSystem.Domain;
+package com.sarh.fich.sarhfich.HRManagementSystem.Domain.models;
 
 import java.util.Date;
 

@@ -2,7 +2,7 @@ package com.sarh.fich.sarhfich.HRManagementSystem.Application.Usecase;
 
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IRetrievePointUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IRetrievePointPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Point;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Point;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 
 import java.util.List;

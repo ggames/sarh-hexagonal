@@ -33,13 +33,13 @@ public class ParentPointEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "punto_padre_id")
-    private Long parentPoint;
+    @Column(name = "punto_id")
+    private Long childPoint;
     
     
     @ManyToOne
-    @JoinColumn(name = "punto_id")
-    private PointEntity childPoint;
+    @JoinColumn(name = "punto_padre_id")
+    private PointEntity parentPoint;
 
    
     @Column(name = "cantidad_ocupada")

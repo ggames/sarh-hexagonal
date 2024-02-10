@@ -2,7 +2,7 @@ package com.sarh.fich.sarhfich.HRManagementSystem.Application.Usecase;
 
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IRetrieveTypeOfPostUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IRetrieveTypeOfPostPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.TypeOfPost;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.TypeOfPost;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 import org.springframework.transaction.annotation.Transactional;
 

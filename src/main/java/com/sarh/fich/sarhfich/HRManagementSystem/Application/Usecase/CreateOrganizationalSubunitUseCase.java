@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.ICreateOrganizationalSubunitUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.OrganizationalSubunitCommand;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ISaveOrganizationalSubunitPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.OrganizationalSubunit;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.OrganizationalSubunit;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 
 @UseCase

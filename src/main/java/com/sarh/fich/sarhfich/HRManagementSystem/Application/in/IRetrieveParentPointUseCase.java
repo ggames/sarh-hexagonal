@@ -1,6 +1,6 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Application.in;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.ParentPoint;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.ParentPoint;
 
 import java.util.List;
 

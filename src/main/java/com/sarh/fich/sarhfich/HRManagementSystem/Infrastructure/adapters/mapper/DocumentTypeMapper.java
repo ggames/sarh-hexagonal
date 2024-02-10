@@ -1,6 +1,6 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.DocumentType;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.DocumentType;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.DocumentTypeEntity;
 
 import org.mapstruct.Mapper;

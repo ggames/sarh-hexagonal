@@ -2,7 +2,7 @@ package com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper
 
 import org.mapstruct.Mapper;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.PostPlant;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.PostPlant;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.PostPlantEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.GenericMapper;
 

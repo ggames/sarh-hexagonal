@@ -4,7 +4,7 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.ICreateCharacter
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.CharacterPositionCommand;
 
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ISaveCharacterPositionPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.CharacterPosition;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.CharacterPosition;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 
 @UseCase

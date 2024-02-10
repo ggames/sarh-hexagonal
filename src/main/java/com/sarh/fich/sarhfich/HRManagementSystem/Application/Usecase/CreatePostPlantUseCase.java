@@ -3,7 +3,7 @@ package com.sarh.fich.sarhfich.HRManagementSystem.Application.Usecase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.ICreatePostPlantUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.PostPlantCommand;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ISavePostPlantPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.PostPlant;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.PostPlant;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 
 @UseCase

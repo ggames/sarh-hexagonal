@@ -4,7 +4,7 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IUpdateTransform
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.TransformationCommand;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadTransformationPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdateTransformationPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Transformation;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Transformation;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 
 @UseCase

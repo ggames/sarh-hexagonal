@@ -4,12 +4,11 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadAgentPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IRetrieveAgentPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ISaveAgentPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdateAgentPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Agent;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Agent;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.AgentEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper.AgentMapper;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,10 +25,11 @@ public class AgentPersistenceAdapter implements ILoadAgentPort,
 
     Logger logger = LoggerFactory.getLogger(AgentPersistenceAdapter.class);
 
-    public AgentPersistenceAdapter(AgentMapper mapper, AgentRepository agentRepository) {
-        this.agentMapper = mapper;
+    public AgentPersistenceAdapter(AgentRepository agentRepository, AgentMapper agentMapper) {
         this.agentRepository = agentRepository;
+        this.agentMapper = agentMapper;
     }
+
 
     @Override
     public Agent load(Long id) {
@@ -49,7 +49,12 @@ public class AgentPersistenceAdapter implements ILoadAgentPort,
     @Override
     public void save(Agent agent) {
 
-        logger.info("AGENTE " + agent);
+        int numeroA = 12;
+        int numeroB = 23;
+
+        double divisionDecimal = (double)numeroA/numeroB;
+
+        logger.info("VALOR DE LA DIVISION DECIMAL " + divisionDecimal);
         AgentEntity agentEntity = agentMapper.toEntity(agent);
 
         agentRepository.save(agentEntity);

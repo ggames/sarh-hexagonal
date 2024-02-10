@@ -1,4 +1,4 @@
-package com.sarh.fich.sarhfich.HRManagementSystem.Domain;
+package com.sarh.fich.sarhfich.HRManagementSystem.Domain.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

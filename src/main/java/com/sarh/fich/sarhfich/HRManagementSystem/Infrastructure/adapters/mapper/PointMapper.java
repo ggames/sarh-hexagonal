@@ -2,7 +2,7 @@ package com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper
 
 import org.mapstruct.Mapper;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Point;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Point;
 
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.PointEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.GenericMapper;

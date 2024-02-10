@@ -1,6 +1,6 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Application.out;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.PostStatus;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.PostStatus;
 
 public interface ISavePostStatusPort {
     

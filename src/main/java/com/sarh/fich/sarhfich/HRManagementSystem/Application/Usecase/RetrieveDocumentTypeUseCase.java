@@ -2,14 +2,14 @@ package com.sarh.fich.sarhfich.HRManagementSystem.Application.Usecase;
 
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IRetrieveDocumentTypeUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IRetrieveDocumentTypePort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.DocumentType;
-import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.DocumentTypeEntity;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.DocumentType;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @UseCase
+
 public class RetrieveDocumentTypeUseCase implements IRetrieveDocumentTypeUseCase {
 
     private final IRetrieveDocumentTypePort retrieveDocumentType;
@@ -27,4 +27,12 @@ public class RetrieveDocumentTypeUseCase implements IRetrieveDocumentTypeUseCase
 
         return documentType;
     }
+
+    @Override
+    public DocumentType getDocumentTypeById(Long id) {
+
+        return retrieveDocumentType.fetchById(id);
+    }
+
+
 }

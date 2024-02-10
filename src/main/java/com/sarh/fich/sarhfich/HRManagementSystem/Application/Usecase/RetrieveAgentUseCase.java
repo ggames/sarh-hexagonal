@@ -1,11 +1,10 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Application.Usecase;
 
 import java.util.List;
-import java.util.Optional;
 
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IRetrieveAgentUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IRetrieveAgentPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Agent;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Agent;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 import org.springframework.transaction.annotation.Transactional;
 

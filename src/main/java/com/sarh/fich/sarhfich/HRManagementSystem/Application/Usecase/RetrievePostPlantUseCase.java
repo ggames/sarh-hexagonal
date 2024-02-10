@@ -1,18 +1,18 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Application.Usecase;
 
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IRetrievePostPlantUseCase;
-import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IRetrievePostStatusUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IRetrievePostPlantPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.PostPlant;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.PostStatus;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.PostPlant;
+import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 
 import java.util.List;
 
-public class RetievePostPlantUseCase implements IRetrievePostPlantUseCase {
+@UseCase
+public class RetrievePostPlantUseCase implements IRetrievePostPlantUseCase {
 
     private final IRetrievePostPlantPort retrievePostPlant;
 
-    public RetievePostPlantUseCase(IRetrievePostPlantPort retrievePostPlant) {
+    public RetrievePostPlantUseCase(IRetrievePostPlantPort retrievePostPlant) {
         this.retrievePostPlant = retrievePostPlant;
     }
 

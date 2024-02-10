@@ -2,7 +2,7 @@ package com.sarh.fich.sarhfich.HRManagementSystem.Application.Usecase;
 
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IRetrieveCharacterPositionUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IRetrieveCharacterPositionPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.CharacterPosition;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.CharacterPosition;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 import org.springframework.transaction.annotation.Transactional;
 

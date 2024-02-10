@@ -2,7 +2,7 @@ package com.sarh.fich.sarhfich.HRManagementSystem.Application.Usecase;
 
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IRetrievePostStatusUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IRetrievePostStatusPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.PostStatus;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.PostStatus;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 
 import java.util.List;

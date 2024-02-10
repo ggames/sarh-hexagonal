@@ -1,6 +1,6 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Application.out;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.OrganizationalSubunit;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.OrganizationalSubunit;
 
 import java.util.List;
 

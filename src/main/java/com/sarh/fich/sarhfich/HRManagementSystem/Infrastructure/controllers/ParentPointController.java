@@ -4,10 +4,8 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.ICreateParentPoi
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IRetrieveParentPointUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IUpdateParentPointUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.ParentPointCommand;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.ParentPoint;
-import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.ParentPointEntity;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.ParentPoint;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.WebAdapter;
-import org.hibernate.engine.spi.ManagedEntity;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

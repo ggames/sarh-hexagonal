@@ -4,7 +4,7 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IUpdatePositionU
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.PositionCommand;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadPositionPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdatePositionPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Position;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Position;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 
 @UseCase

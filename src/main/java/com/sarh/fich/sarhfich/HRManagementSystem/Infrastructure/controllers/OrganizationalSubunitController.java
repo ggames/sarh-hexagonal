@@ -4,7 +4,7 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.ICreateOrganizat
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IRetrieveOrganizationalSubunitUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IUpdateOrganizationalSubunitUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.OrganizationalSubunitCommand;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.OrganizationalSubunit;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.OrganizationalSubunit;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.WebAdapter;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

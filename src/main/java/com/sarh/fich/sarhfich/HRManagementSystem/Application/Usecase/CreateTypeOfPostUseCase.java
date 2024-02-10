@@ -3,7 +3,7 @@ package com.sarh.fich.sarhfich.HRManagementSystem.Application.Usecase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.ICreateTypeOfPostUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.TypeOfPostCommand;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ISaveTypeOfPostPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.TypeOfPost;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.TypeOfPost;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 
 @UseCase

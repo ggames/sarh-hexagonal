@@ -1,6 +1,6 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Application.in;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Position;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Position;
 
 import java.util.List;
 

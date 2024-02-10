@@ -1,6 +1,6 @@
 package com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Point;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Point;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,13 +14,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ParentPointCommand {
 
+    private Long childPoint;
 
-    private Long parenPoint;
+    private Point parentPoint;
 
-    private Point childPoint;
-
-   
-    
     private Integer occupiedQuantity;
 
   

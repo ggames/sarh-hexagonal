@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import com.sarh.fich.sarhfich.HRManagementSystem.Exceptions.BusinessException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,6 +36,13 @@ public class ControllerAdvice {
         ErrorDTO error = ErrorDTO.builder().code("P-500").message(ex.getMessage()).build();
 
         return new ResponseEntity<ErrorDTO>(error, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(BusinessException.class)
+    public ResponseEntity<ErrorDTO> businessExceptionHandler(BusinessException ex){
+        ErrorDTO error = ErrorDTO.builder().code(ex.getCode()).message(ex.getMessage()).build();
+
+        return new ResponseEntity<ErrorDTO>(error, ex.getStatus());
     }
 
   

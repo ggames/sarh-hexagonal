@@ -4,7 +4,7 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadOrganizati
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IRetrieveOrganizationalUnitPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ISaveOrganizationalUnitPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdateOrganizationalUnitPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.OrganizationalUnit;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.OrganizationalUnit;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.OrganizationalUnitEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper.OrganizationalUnitMapper;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.PersistenceAdapter;

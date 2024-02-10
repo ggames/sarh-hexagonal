@@ -4,7 +4,7 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IUpdateTypeOfPos
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.TypeOfPostCommand;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadTypeOfPostPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdateTypeOfPostPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.TypeOfPost;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.TypeOfPost;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 
 @UseCase

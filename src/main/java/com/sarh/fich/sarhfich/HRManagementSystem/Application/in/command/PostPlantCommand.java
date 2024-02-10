@@ -2,9 +2,9 @@ package com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command;
 
 import java.util.Date;
 
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Agent;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.OrganizationalSubunit;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Position;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Agent;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.OrganizationalSubunit;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Position;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

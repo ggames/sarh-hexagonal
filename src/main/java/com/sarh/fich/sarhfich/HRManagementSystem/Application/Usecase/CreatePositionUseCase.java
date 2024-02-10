@@ -4,7 +4,7 @@ package com.sarh.fich.sarhfich.HRManagementSystem.Application.Usecase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.ICreatePositionUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.PositionCommand;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ISavePositionPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Position;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Position;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 
 @UseCase

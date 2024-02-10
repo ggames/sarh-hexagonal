@@ -4,7 +4,7 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadDocumentTy
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IRetrieveDocumentTypePort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ISaveDocumentTypePort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdateDocumentTypePort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.DocumentType;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.DocumentType;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.DocumentTypeEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper.DocumentTypeMapper;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.PersistenceAdapter;
@@ -56,4 +56,14 @@ ISaveDocumentTypePort, IUpdateDocumentTypePort, IRetrieveDocumentTypePort {
         List<DocumentTypeEntity> documentTypeList = documentRepository.findAll();
         return documentMapper.toDto(documentTypeList);
     }
+
+    @Override
+    public DocumentType fetchById(Long id) {
+        DocumentTypeEntity documentType = documentRepository.findById(id)
+                .orElse(null);
+
+        return documentMapper.toDto(documentType);
+    }
+
+
 }

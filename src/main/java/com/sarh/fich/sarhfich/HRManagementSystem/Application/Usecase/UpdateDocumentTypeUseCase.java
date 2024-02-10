@@ -4,7 +4,7 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IUpdateDocumentT
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.DocumentTypeCommand;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadDocumentTypePort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdateDocumentTypePort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.DocumentType;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.DocumentType;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 
 @UseCase

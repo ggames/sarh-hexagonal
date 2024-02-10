@@ -4,8 +4,10 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IUpdatePointUseC
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.PointCommand;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadPointPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdatePointPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Point;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Point;
+import com.sarh.fich.sarhfich.HRManagementSystem.common.UseCase;
 
+@UseCase
 public class UpdatePointUseCase implements IUpdatePointUseCase {
 
     private final ILoadPointPort loadPointPort;

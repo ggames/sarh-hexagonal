@@ -4,11 +4,12 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ILoadPointPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IRetrievePointPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.ISavePointPort;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.out.IUpdatePointPort;
-import com.sarh.fich.sarhfich.HRManagementSystem.Domain.Point;
+import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Point;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.PointEntity;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper.PointMapper;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.PersistenceAdapter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @PersistenceAdapter
@@ -35,9 +36,8 @@ public class PointPersistenceAdapter implements ILoadPointPort, ISavePointPort,
 
     @Override
     public void save(Point point) {
-        
+
         PointEntity pointEntity = pointMapper.toEntity(point);
-          
         pointRepository.save(pointEntity);
     }
 
