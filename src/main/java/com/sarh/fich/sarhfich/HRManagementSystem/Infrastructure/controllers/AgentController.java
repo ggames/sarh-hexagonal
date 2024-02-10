@@ -56,6 +56,8 @@ public class AgentController {
                 agent.getDocumentType(),
                 agent.getDocument(),
                 agent.getBirthDate(),
+                agent.getLeavingDate(),
+                agent.isDeceased(),
                 agent.getDocket(),
                 agent.getEmail(),
                 agent.getPhone(),

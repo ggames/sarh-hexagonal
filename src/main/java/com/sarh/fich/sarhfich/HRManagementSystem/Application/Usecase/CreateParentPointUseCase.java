@@ -19,7 +19,7 @@ public class CreateParentPointUseCase implements ICreateParentPointUseCase {
     public boolean saveParentPoint(ParentPointCommand command) {
         
         ParentPoint parentPoint = ParentPoint.builder()
-                              .parentPoint(command.getParenPoint())
+                              .parentPoint(command.getParentPoint())
                               .childPoint(command.getChildPoint())
                               .occupiedQuantity(command.getOccupiedQuantity())
                               .build();

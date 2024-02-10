@@ -35,7 +35,7 @@ public class ParentPointController {
     public void save(@RequestBody ParentPoint parentPoint){
         ParentPointCommand command = ParentPointCommand.builder()
                 .childPoint(parentPoint.getChildPoint())
-                .parenPoint(parentPoint.getParentPoint())
+                .parentPoint(parentPoint.getParentPoint())
                 .occupiedQuantity(parentPoint.getOccupiedQuantity())
                 .build();
         saveParentPoint.saveParentPoint(command);
@@ -44,7 +44,7 @@ public class ParentPointController {
     public void update(Long id, ParentPoint parentPoint){
         ParentPointCommand command = ParentPointCommand.builder()
                 .childPoint(parentPoint.getChildPoint())
-                .parenPoint(parentPoint.getParentPoint())
+                .parentPoint(parentPoint.getParentPoint())
                 .occupiedQuantity(parentPoint.getOccupiedQuantity())
                 .build();
 

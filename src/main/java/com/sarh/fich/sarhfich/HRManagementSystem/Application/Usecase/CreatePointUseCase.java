@@ -36,7 +36,7 @@ public class CreatePointUseCase implements ICreatePointUseCase {
 
        if(!command.getItemsPoint().isEmpty()){
            List<ParentPoint> items = command.getItemsPoint();
-           items.forEach(__point -> __point.setChildPoint(point));
+           items.forEach(__point -> __point.setParentPoint(point));
            point.setItemsPoint(items);
        }
 

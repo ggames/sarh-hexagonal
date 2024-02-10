@@ -24,7 +24,7 @@ public class UpdateParentPointUseCase implements IUpdateParentPointUseCase {
     @Override
     public boolean updateParentPoint(Long id, ParentPointCommand command) {
         ParentPoint parentPoint = loadParentPoint.load(id);
-            parentPoint.setParentPoint(command.getParenPoint());
+            parentPoint.setParentPoint(command.getParentPoint());
             parentPoint.setChildPoint(command.getChildPoint());
             parentPoint.setOccupiedQuantity(command.getOccupiedQuantity());
 
