@@ -34,13 +34,15 @@ public class CreatePointUseCase implements ICreatePointUseCase {
                 .rectorate(command.isRectorate())
                 .build();
 
-       if(!command.getItemsPoint().isEmpty()){
+        Point pointNew = savePointPort.save(point);
+
+
+        if(command.getItemsPoint() != null ){
            List<ParentPoint> items = command.getItemsPoint();
-           items.forEach(__point -> __point.setParentPoint(point));
+           items.forEach(__point -> __point.setChildPoint(pointNew));
            point.setItemsPoint(items);
        }
-
-        savePointPort.save(point);
+        savePointPort.save(pointNew);
 
         return true;
     }

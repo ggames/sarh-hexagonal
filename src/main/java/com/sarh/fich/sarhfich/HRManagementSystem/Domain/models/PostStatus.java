@@ -20,7 +20,7 @@ public class PostStatus {
 
     private PostStatusEnum postStatus;
 
-    private String namePostStatus;
+    private String name;
     
     List<Position> positions;
 

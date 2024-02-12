@@ -11,6 +11,8 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.entity.
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper.AgentMapper;
 import com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.adapters.mapper.PostStatusMapper;
 import com.sarh.fich.sarhfich.HRManagementSystem.common.PersistenceAdapter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
@@ -18,6 +20,7 @@ import java.util.List;
 public class PostStatusPersistenceAdapter implements ILoadPostStatusPort,
  ISavePostStatusPort, IUpdatePostStatusPort, IRetrievePostStatusPort {
 
+    Logger logger = LoggerFactory.getLogger(PostStatusPersistenceAdapter.class);
     private final PostStatusRepository statusRepository;
     private final PostStatusMapper statusMapper;
 
@@ -42,7 +45,8 @@ public class PostStatusPersistenceAdapter implements ILoadPostStatusPort,
     public void save(PostStatus postStatus) {
         
         PostStatusEntity statusEntity = statusMapper.toEntity(postStatus);
-        
+
+        logger.error("Estado Cargos: " + postStatus + " Entidad: " + statusEntity);
         statusRepository.save(statusEntity);
     }
 

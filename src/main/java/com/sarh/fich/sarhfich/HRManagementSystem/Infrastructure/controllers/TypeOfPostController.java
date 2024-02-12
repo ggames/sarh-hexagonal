@@ -51,6 +51,7 @@ public class TypeOfPostController {
            updateTypeofPost.updateTypeOfPost(id, command);
     }
 
+    @GetMapping(path = "all", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<TypeOfPost>> getAllTypeOfPost(){
 
         return ResponseEntity.ok(retrieveTypeOfPost.getAllTypeOfPost());

@@ -12,8 +12,11 @@ public class ManagerPoints {
 
     private final IUpdatePointPort updatePoint;
 
-    public ManagerPoints(IUpdatePointPort updatePoint) {
+    private final PointOriginManager pointOriginManager;
+    public ManagerPoints(IUpdatePointPort updatePoint,
+                         PointOriginManager pointOriginManager) {
         this.updatePoint = updatePoint;
+        this.pointOriginManager = pointOriginManager;
     }
 
     public void resetPoints(Point point) throws BusinessException {
@@ -25,7 +28,7 @@ public class ManagerPoints {
         }
 
         parentPointsList.forEach(originPoints ->{
-            Point originPoint = originPoints.getParentPoint();
+            Point originPoint = originPoints.getChildPoint();
             int pointsRecoveredFronOrigin = originPoint.getMissingQuantity() + originPoint.getQuantityAvailable();
             originPoint.setQuantityAvailable(pointsRecoveredFronOrigin);
             updatePoint.update(originPoint);
@@ -33,5 +36,7 @@ public class ManagerPoints {
         point.setItemsPoint(null);
         point.setQuantityAvailable(0);
         updatePoint.update(point);
+        pointOriginManager.deleteOriginPointsFromPoint(point);
     }
+
 }

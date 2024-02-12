@@ -9,8 +9,11 @@ import com.sarh.fich.sarhfich.HRManagementSystem.common.PersistenceAdapter;
 import java.util.List;
 
 @PersistenceAdapter
-public class ParentPointPersistenceAdapter implements ILoadParentPointPort, ISaveParentPointPort,
-        IUpdateParentPointPort, IRetrieveParentPointPort {
+public class ParentPointPersistenceAdapter implements ILoadParentPointPort,
+        ISaveParentPointPort,
+        IUpdateParentPointPort,
+        IRetrieveParentPointPort,
+        IDeleteParentPointPort   {
 
     private final ParentPointRepository parentPointRepository;
 
@@ -53,5 +56,11 @@ public class ParentPointPersistenceAdapter implements ILoadParentPointPort, ISav
     public void update(ParentPoint parentPoint) {
         ParentPointEntity parentPointEntity = parentPointMapper.toEntity(parentPoint);
         parentPointRepository.save(parentPointEntity);
+    }
+
+    @Override
+    public boolean delete(Long id) {
+        parentPointRepository.deleteById(id);
+        return true;
     }
 }

@@ -25,7 +25,7 @@ public class PointCommand {
 
     private Integer missingQuantity;
 
-    List<ParentPoint> itemsPoint;
+    private List<ParentPoint> itemsPoint;
 
     private boolean isTemporary;
 

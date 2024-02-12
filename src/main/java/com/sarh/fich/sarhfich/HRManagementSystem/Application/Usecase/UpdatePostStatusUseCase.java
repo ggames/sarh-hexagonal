@@ -28,7 +28,7 @@ public class UpdatePostStatusUseCase implements IUpdatePostStatusUseCase {
 
         PostStatus postStatus = loadPostStatus.load(id);
                  
-                  postStatus.setNamePostStatus(command.getNamePostStatus());
+                  postStatus.setName(command.getName());
 
                   postStatus.setPostStatus(command.getPostStatus());
                   

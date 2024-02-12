@@ -4,5 +4,6 @@ import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.PointCom
 
 public interface IUpdatePointUseCase {
     
-    public boolean updatePoint(Long id, PointCommand command);
+    boolean updatePoint(Long id, PointCommand command);
+
 }

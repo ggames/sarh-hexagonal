@@ -25,7 +25,8 @@ public class AgentPersistenceAdapter implements ILoadAgentPort,
 
     Logger logger = LoggerFactory.getLogger(AgentPersistenceAdapter.class);
 
-    public AgentPersistenceAdapter(AgentRepository agentRepository, AgentMapper agentMapper) {
+    public AgentPersistenceAdapter(AgentRepository agentRepository,
+                                   AgentMapper agentMapper) {
         this.agentRepository = agentRepository;
         this.agentMapper = agentMapper;
     }
@@ -43,11 +44,12 @@ public class AgentPersistenceAdapter implements ILoadAgentPort,
     public void update(Agent agent) {
 
         AgentEntity agentEntity = agentMapper.toEntity(agent);
+
         agentRepository.save(agentEntity);
     }
 
     @Override
-    public void save(Agent agent) {
+    public Agent save(Agent agent) {
 
         int numeroA = 12;
         int numeroB = 23;
@@ -57,7 +59,7 @@ public class AgentPersistenceAdapter implements ILoadAgentPort,
         logger.info("VALOR DE LA DIVISION DECIMAL " + divisionDecimal);
         AgentEntity agentEntity = agentMapper.toEntity(agent);
 
-        agentRepository.save(agentEntity);
+        return agentMapper.toDto( agentRepository.save(agentEntity));
     } // TODO Auto-generated method stub
 
     @Override

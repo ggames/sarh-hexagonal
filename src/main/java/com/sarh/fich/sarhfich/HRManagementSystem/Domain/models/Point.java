@@ -30,4 +30,13 @@ public class Point {
 
     private boolean rectorate;
 
+    public void plus(Integer amount){
+        this.quantityAvailable = this.quantityAvailable + amount;
+    }
+
+    public void subtract(Integer amount){
+
+        this.quantityAvailable = this.quantityAvailable - amount;
+    }
+
 }

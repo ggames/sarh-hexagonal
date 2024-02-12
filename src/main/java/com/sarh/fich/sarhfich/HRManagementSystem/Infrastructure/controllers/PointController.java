@@ -2,6 +2,7 @@ package com.sarh.fich.sarhfich.HRManagementSystem.Infrastructure.controllers;
 
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.ICreatePointUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IRetrievePointUseCase;
+import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IUpdateAvailablePointsUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.IUpdatePointUseCase;
 import com.sarh.fich.sarhfich.HRManagementSystem.Application.in.command.PointCommand;
 import com.sarh.fich.sarhfich.HRManagementSystem.Domain.models.Point;
@@ -21,31 +22,41 @@ public class PointController {
     private final IUpdatePointUseCase updatePoint;
     private final IRetrievePointUseCase retrievePoint;
 
+    private final IUpdateAvailablePointsUseCase updateAvailablePoints;
     public PointController(ICreatePointUseCase savePoint,
                            IUpdatePointUseCase updatePoint,
-                           IRetrievePointUseCase retrievePoint) {
+                           IRetrievePointUseCase retrievePoint,
+                           IUpdateAvailablePointsUseCase updateAvailablePoints) {
         this.savePoint = savePoint;
         this.updatePoint = updatePoint;
         this.retrievePoint = retrievePoint;
+        this.updateAvailablePoints = updateAvailablePoints;
     }
 
     @PostMapping(path = "save", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void save(Point point){
+    public void save(@RequestBody Point point){
 
         PointCommand command = PointCommand.builder()
                 .pointCode(point.getPointCode())
                 .typeOfPost(point.getTypeOfPost())
+                .itemsPoint(point.getItemsPoint())
                 .quantityAvailable(point.getQuantityAvailable())
                 .missingQuantity(point.getMissingQuantity())
                 .isTemporary(point.isTemporary())
                 .rectorate(point.isRectorate()).build();
 
         savePoint.savePoint(command);
+        if(command.getItemsPoint() != null){
+            command.getItemsPoint().forEach(po -> {
+                updateAvailablePoints.updateAvailablePointToCreatePoint(po.getId(), command.getMissingQuantity());
+            } );
+
+        }
 
     }
 
-    @PutMapping(path = "update", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public  void update(Long id, Point point){
+    @PutMapping(path = "update/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public  void update(@PathVariable Long id, @RequestBody Point point){
         PointCommand command = PointCommand.builder()
                 .pointCode(point.getPointCode())
                 .typeOfPost(point.getTypeOfPost())
@@ -55,6 +66,12 @@ public class PointController {
                 .rectorate(point.isRectorate()).build();
 
         updatePoint.updatePoint(id, command);
+    }
+
+    @PutMapping(path = "assembly/{id}/{quantityPoint}")
+    public void updateAvailablePointPerAssembly(@PathVariable Long id,@PathVariable Integer quantityPoint){
+
+        updateAvailablePoints.updateAvailablePointPerAssembly(id, quantityPoint);
     }
 
     @GetMapping(path = "all", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -68,4 +85,6 @@ public class PointController {
 
         return  ResponseEntity.ok(retrievePoint.getPointById(id));
     }
+
+
 }

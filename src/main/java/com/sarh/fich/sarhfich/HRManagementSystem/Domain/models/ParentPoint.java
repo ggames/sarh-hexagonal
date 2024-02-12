@@ -14,9 +14,9 @@ public class ParentPoint {
     
     private Long id;
 
-    private Long childPoint;
+    private Long parentPoint;
 
-    private Point parentPoint;
+    private Point childPoint;
 
     private Integer occupiedQuantity;
 }

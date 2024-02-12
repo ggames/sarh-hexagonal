@@ -14,9 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PostStatusCommand {
 
-    private String namePostStatus;
-
     private PostStatusEnum postStatus;
 
-
+    private String name;
 }

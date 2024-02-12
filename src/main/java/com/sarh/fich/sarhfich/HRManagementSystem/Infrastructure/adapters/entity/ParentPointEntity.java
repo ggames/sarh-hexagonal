@@ -34,12 +34,12 @@ public class ParentPointEntity {
     private Long id;
 
     @Column(name = "punto_id")
-    private Long childPoint;
+    private Long parentPoint;
     
     
     @ManyToOne
-    @JoinColumn(name = "punto_padre_id")
-    private PointEntity parentPoint;
+    @JoinColumn(name = "punto_child_id")
+    private PointEntity childPoint;
 
    
     @Column(name = "cantidad_ocupada")

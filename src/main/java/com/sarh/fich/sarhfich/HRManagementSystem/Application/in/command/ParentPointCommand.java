@@ -14,9 +14,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ParentPointCommand {
 
-    private Long childPoint;
+    private Long id;
 
-    private Point parentPoint;
+    private Long parentPoint;
+
+    private Point childPoint;
 
     private Integer occupiedQuantity;
 

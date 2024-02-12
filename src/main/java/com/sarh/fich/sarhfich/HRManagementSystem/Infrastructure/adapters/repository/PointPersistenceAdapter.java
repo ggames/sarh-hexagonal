@@ -35,10 +35,11 @@ public class PointPersistenceAdapter implements ILoadPointPort, ISavePointPort,
     }
 
     @Override
-    public void save(Point point) {
+    public Point save(Point point) {
 
         PointEntity pointEntity = pointMapper.toEntity(point);
-        pointRepository.save(pointEntity);
+
+        return  pointMapper.toDto(pointRepository.save(pointEntity));
     }
 
     @Override
